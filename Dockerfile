@@ -89,7 +89,7 @@ RUN cd /tmp \
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-COPY --from=build-app /src/gpu-iris-mpc/target/x86_64-unknown-linux-gnu/release/target/release/example-gpu-server /bin/example-gpu-server
+COPY --from=build-app /src/gpu-iris-mpc/target/x86_64-unknown-linux-gnu/release/example-gpu-server /bin/example-gpu-server
 
 USER 65534
 ENTRYPOINT ["/bin/example-gpu-server"]
